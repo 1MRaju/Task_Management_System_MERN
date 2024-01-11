@@ -60,25 +60,26 @@ const TaskLists = () => {
   
     <ul className=' w-full'>
       {taskList.map((list)=>(
-        <li key={list._id} className=' w-full border rounded bg-slate-400 my-2 py-2 px-2'> 
-          <div className='flex justify-around'>
-            <div className='text-center w-1/5 border'>
+        <li key={list._id} 
+        className=' w-full border rounded bg-slate-400 my-4 py-2 px-2 '> 
+          <div className='flex justify-around  flex-col sm:flex-row '>
+            <div className='text-center sm:w-1/5 border  py-2 sm:py-1'>
               <span className='font-bold tracking-tight'>{list.title}</span>
             </div>
-            <div className='text-left w-7/12 border px-2'>
+            <div className='text-left sm:w-7/12 border px-2 py-3 sm:py-1'>
               <span className='text-sm'>{list.description}</span>
             </div>
         
-          <div className='flex justify-around w-1/5'>
+          <div className='flex justify-around sm:w-1/5'>
             <button 
             onClick={()=>editTask(list._id)}
-              className='border w-1/3 bg-blue-500 px-2 text-white hover:bg-slate-400 hover:text-blue-700 rounded'>
+              className='border w-1/4 sm:w-1/3 bg-blue-500 px-2 text-white hover:bg-slate-400 hover:text-blue-700 rounded'>
                 Edit
             </button>
 
             <button 
               onClick={()=>deleteTask(list._id)}
-              className='border w-1/2 bg-red-500 text-white hover:bg-slate-400  hover:text-red-700 px-2 rounded'>
+              className='border w-1/4 sm:w-1/2 bg-red-500 text-white hover:bg-slate-400  hover:text-red-700 px-2 rounded'>
                 Delete
             </button>
 

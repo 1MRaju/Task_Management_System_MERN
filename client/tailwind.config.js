@@ -8,7 +8,7 @@ module.exports = {
     extend: {},
     container: {
       padding: {
-        md: "8rem",
+        lg: "6rem",
       }
     }
   },
