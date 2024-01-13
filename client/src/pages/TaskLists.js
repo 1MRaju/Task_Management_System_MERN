@@ -35,7 +35,7 @@ const TaskLists = () => {
         
         setTaskList((await response).data.lists);
       } catch (error) {
-        console.log(error);
+        console.log(error.message);
       }
     }
     getTaskList()

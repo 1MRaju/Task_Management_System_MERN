@@ -98,6 +98,13 @@ const deleteTask = async (req, res) => {
   try {
      await Task.findByIdAndDelete(taskId);
 
+     if (!deletedUser) {
+      return res.status(404).send({
+        success: false,
+        message: "User not found"
+      });
+    }
+
      res.status(200).send({
       success: true,
       message: "Task Deleted successfully",
@@ -106,7 +113,7 @@ const deleteTask = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "error while deleting task",
-      error
+      error: error.message
     });
   }
 }

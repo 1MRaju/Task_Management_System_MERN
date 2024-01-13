@@ -29,6 +29,7 @@ const TaskUpdate = () => {
       setIsUpdated(true);
        setIsError(false);
     } catch (error) {
+      console.log(error.message);
       setIsError(true);
       setIsUpdated(false)
       // console.log(error);
@@ -50,7 +51,7 @@ const TaskUpdate = () => {
       });
 
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   }
 
